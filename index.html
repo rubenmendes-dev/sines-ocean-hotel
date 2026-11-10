@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sines Ocean Hotel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">Sines Ocean Hotel</div>
+
+      <nav>
+        <a href="#quartos">Quartos</a>
+        <a href="#reserva">Reservar</a>
+        <a href="#contactos">Contactos</a>
+      </nav>
+
+      <a href="#reserva" class="botao-nav">Reservar agora</a>
+    </header>
+
+    <div class="hero">
+      <div class="hero-conteudo">
+        <span class="hero-etiqueta">Sines Portugal</span>
+        <h1>Sines Ocean Hotel</h1>
+        <p>Uma experiência única junto ao mar</p>
+        <a href="#reserva" class="botao-hero">Reservar estadia</a>
+      </div>
+    </div>
+
+    <h2 id="quartos">Os nossos quartos</h2>
+
+    <div class="quartos">
+      <div class="quarto-card">
+        <div class="galeria-quarto">
+          <img
+            id="imagemStandard"
+            src="imagens/quarto-standard.png"
+            alt="Quarto Standard"
+          />
+
+          <button
+            type="button"
+            class="seta-galeria seta-esquerda"
+            id="standardAnterior"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            class="seta-galeria seta-direita"
+            id="standardSeguinte"
+          >
+            ›
+          </button>
+        </div>
+
+        <h3 id="nomeStandard">Quarto Standard</h3>
+        <p class="detalhe-quarto">Quarto confortável para até 2 hóspedes</p>
+        <p class="detalhe-quarto">1 cama de casal</p>
+        <p class="preco-quarto">
+          <span id="preçoStandard">70€</span> por noite
+        </p>
+        <a href="#reserva" class="botao-quarto">Reservar</a>
+      </div>
+
+      <div class="quarto-card">
+        <div class="galeria-quarto">
+          <img
+            id="imagemDeluxe"
+            src="imagens/quarto-deluxe.png"
+            alt="Quarto Deluxe"
+          />
+
+          <button
+            type="button"
+            class="seta-galeria seta-esquerda"
+            id="deluxeAnterior"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            class="seta-galeria seta-direita"
+            id="deluxeSeguinte"
+          >
+            ›
+          </button>
+        </div>
+        <h3 id="nomeDeluxe">Quarto Deluxe</h3>
+        <p class="detalhe-quarto">
+          Quarto espaçoso com maior conforto para até 3 hóspedes
+        </p>
+        <p class="detalhe-quarto">1 cama de casal + 1 sofá-cama</p>
+        <p class="preco-quarto"><span id="preçoDeluxe">100€</span> por noite</p>
+        <a href="#reserva" class="botao-quarto">Reservar</a>
+      </div>
+
+      <div class="quarto-card">
+        <div class="galeria-quarto">
+          <img id="imagemSuite" src="imagens/suite.png" alt="Suíte" />
+
+          <button
+            type="button"
+            class="seta-galeria seta-esquerda"
+            id="suiteAnterior"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            class="seta-galeria seta-direita"
+            id="suiteSeguinte"
+          >
+            ›
+          </button>
+        </div>
+        <h3 id="nomeSuite">Suíte</h3>
+        <p class="detalhe-quarto">
+          A nossa opção mais exclusiva, com máximo conforto para até 4 hóspedes
+        </p>
+        <p class="detalhe-quarto">
+          1 cama king-size + 1 sofá-cama para 2 pessoas
+        </p>
+        <p class="preco-quarto"><span id="preçoSuite">150€</span> por noite</p>
+        <a href="#reserva" class="botao-quarto">Reservar</a>
+      </div>
+    </div>
+    <h2 id="reserva">Faça a sua reserva</h2>
+    <form>
+      <label>Nome do hóspede</label>
+      <input type="text" id="nomeDoHóspede" />
+      <label>Idade</label>
+      <input type="number" id="idade" />
+      <label>Tipo de quarto</label>
+      <select id="tipoDeQuarto">
+        <option>Standard</option>
+        <option>Deluxe</option>
+        <option>Suíte</option>
+      </select>
+      <label>Número de hóspedes</label>
+      <input type="number" id="númeroDeHóspedes" />
+      <label>Número de noites</label>
+      <input type="number" id="númeroDeNoites" />
+      <label>Pequeno-almoço</label>
+      <input type="checkbox" id="pequenoAlmoço" />
+      <label>Estacionamento</label>
+      <input type="checkbox" id="estacionamento" />
+      <label>Época do ano</label>
+      <select id="épocaDoAno">
+        <option>Alta</option>
+        <option>Baixa</option>
+      </select>
+      <label>Código promocional</label>
+      <input type="text" id="códigoPromocional" />
+      <button type="button" id="botãoReservar">Reservar</button>
+    </form>
+    <div id="resultadoReserva"></div>
+    <p id="confirmaçãoReserva"></p>
+    <button type="button" id="botãoPagar" hidden>Simular pagamento</button>
+    <a id="verRecibo" target="_blank" hidden>Ver recibo em PDF</a>
+    <script src="projetoHotel.js"></script>
+  </body>
+</html>
